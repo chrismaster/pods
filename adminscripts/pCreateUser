@@ -1,0 +1,4 @@
+#!/bin/sh
+# vi: ft=sh
+# pCreateUser Benutzer
+sudo useradd -m -s /bin/bash -c $1 -U -d /home/$1 $1
