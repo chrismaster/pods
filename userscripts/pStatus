@@ -1,0 +1,5 @@
+#!/bin/sh
+# vi: ft=sh
+# systemctl status of a container
+# pStatus Containername
+systemctl --user status $1
