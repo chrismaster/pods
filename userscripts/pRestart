@@ -1,0 +1,6 @@
+#!/bin/sh
+# vi: ft=sh
+# restart or start a container or pod
+# pRestart Containername
+systemctl --user daemon-reload
+systemctl --user restart $1
