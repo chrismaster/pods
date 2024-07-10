@@ -1,0 +1,11 @@
+#!/bin/sh
+# vi: ft=sh
+read -p "Delete User $1 ? (yes/no) " yn
+
+case $jn in
+        yes ) sudo userdel -r $1;;
+        no ) echo deleted $1 ...;
+                exit;;
+        * ) echo ok $1 btb;
+                exit 1;;
+esac
