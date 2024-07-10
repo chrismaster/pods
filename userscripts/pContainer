@@ -1,0 +1,7 @@
+#!/bin/sh
+# vi: ft=sh
+mkdir -p ~/.config/containers/systemd/
+( cd ~/.config/containers/systemd && curl -sSLO https://raw.githubusercontent.com/chrismaster/pods/main/example/examplecontainer.container && sed -i -e "s/examplecontainer/$1/g" examplecontainer.container && mv examplecontainer.container $1.container )
+cd ~
+ln -s .config/containers/systemd/$1.container ~/$1
+loginctl enable-linger $USER
