@@ -1,0 +1,44 @@
+# vi: ft=systemd
+[Unit]
+Description=Container examplecontainer
+After=local-fs.target
+
+[Container]
+ContainerName=examplecontainer
+#Image=docker.io/library/examplecontainer:latest
+#Image=localhost/examplecontainer:latest
+#PodmanArgs=--privileged
+#Exec=examplecontainer run --config /etc/examplecontainer.json
+#AddCapability=NET_ADMIN
+
+# https://docs.podman.io/en/latest/markdown/podman-run.1.html#userns-mode
+# auto - Host User UID is not mapped into container
+# UserNS=auto
+# Default User account mapped to root user in container
+# UserNS=host
+# Map user account to same UID within container
+# UserNS=keep-id
+# Map user account to specified UID, GID value within container
+# UserNS=keep-id:uid=200,gid=210
+
+# systemctl --user start podman.socket
+# Volume=/var/run/user/1034/podman/podman.sock:/var/run/docker.sock:z
+# Volume=%h/examplecontainerVOLUME:/etc/somedata:Z
+
+# Environment=DOCKER_CERT_PATH=/certs/client
+
+# Network=examplecontainer.network
+# Pod=examplecontainer.pod
+# PublishPort=9080:80
+# PublishPort=9443:443/udp
+AutoUpdate=registry
+
+# [Service]
+# TimeoutStartSec=900
+# RestartSec=10
+# Restart=always
+
+
+[Install]
+# Start by default on boot
+WantedBy=multi-user.target default.target
