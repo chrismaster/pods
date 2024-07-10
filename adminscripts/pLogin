@@ -1,0 +1,8 @@
+#!/bin/sh
+# vi: ft=sh
+# Login to passwordless user
+if id "$1" >/dev/null 2>&1; then
+    sudo machinectl shell --uid $1
+else
+    echo 'user not found'
+fi
