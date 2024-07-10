@@ -1,0 +1,4 @@
+#!/bin/sh
+# vi: ft=sh
+# update containers
+podman auto-update
