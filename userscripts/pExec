@@ -1,0 +1,4 @@
+#!/bin/sh
+# vi: ft=sh
+# pExec containername command
+podman exec $1 $2
