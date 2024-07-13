@@ -1,0 +1,4 @@
+#!/bin/sh
+# vi: ft=sh
+# pLog ContainerName
+journalctl --user -afn1000 -xeu $1
