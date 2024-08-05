@@ -32,6 +32,7 @@ ContainerName=examplecontainer
 # PublishPort=9080:80
 # PublishPort=9443:443/udp
 AutoUpdate=registry
+# AutoUpdate=local
 
 # [Service]
 # TimeoutStartSec=900
