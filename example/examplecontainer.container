@@ -7,6 +7,7 @@ After=local-fs.target
 ContainerName=examplecontainer
 #Image=docker.io/library/examplecontainer:latest
 #Image=localhost/examplecontainer:latest
+#Image=examplecontainer.build
 #PodmanArgs=--privileged
 #Exec=examplecontainer run --config /etc/examplecontainer.json
 #AddCapability=NET_ADMIN
