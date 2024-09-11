@@ -4,4 +4,4 @@
 getent passwd | grep bash | awk -F: '{print $1}' | grep -v ^root$ | sort | \
 xargs -Iusername \
 sudo machinectl -q shell username@ \
-/bin/bash -c 'podman auto-update --dry-run|grep pending'
+/bin/bash -c 'echo username && podman auto-update --dry-run|grep pending'
