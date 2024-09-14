@@ -2,7 +2,7 @@
 [Build]
 ImageTag=localhost/examplebuild
 
-SetWorkingDirectory=%h/exampleBUILD
+SetWorkingDirectory=%h/examplebuildBUILD
 
 [Service]
 TimeoutStartSec=900
