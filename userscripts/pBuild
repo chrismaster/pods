@@ -1,7 +1,9 @@
 #!/bin/sh
 # vi: ft=sh
 mkdir -p ~/.config/containers/systemd/
+mkdir -p ~/$1BUILD
+touch $1BUILD/Containerfile
 ( cd ~/.config/containers/systemd && curl -sSLO https://raw.githubusercontent.com/chrismaster/pods/main/example/examplebuild.build && sed -i -e "s/examplebuild/$1/g" examplebuild.build && mv examplebuild.build $1.build )
 cd ~
-ln -s .config/containers/systemd/$1.build ~/$1
+ln -s .config/containers/systemd/$1.build ~/$1-build
 loginctl enable-linger $USER
