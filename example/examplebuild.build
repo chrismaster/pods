@@ -1,0 +1,8 @@
+# vi: ft=systemd
+[Build]
+ImageTag=localhost/example
+
+SetWorkingDirectory=%h/exampleBuild
+
+[Service]
+TimeoutStartSec=900
