@@ -7,7 +7,7 @@ After=local-fs.target
 ContainerName=examplecontainer
 #Image=docker.io/library/examplecontainer:latest
 #Image=localhost/examplecontainer:latest
-#Image=examplecontainer.build
+#Image=examplecontainer.build #for local builds....
 #PodmanArgs=--privileged
 #Exec=examplecontainer run --config /etc/examplecontainer.json
 #AddCapability=NET_ADMIN
@@ -27,13 +27,14 @@ ContainerName=examplecontainer
 # Volume=%h/examplecontainerVOLUME:/etc/somedata:Z
 
 # Environment=DOCKER_CERT_PATH=/certs/client
+# HealthCmd=curl --fail http://localhost:8501/_stcore/health
 
 # Network=examplecontainer.network
 # Pod=examplecontainer.pod
 # PublishPort=9080:80
 # PublishPort=9443:443/udp
 AutoUpdate=registry
-# AutoUpdate=local
+# AutoUpdate=local #for local builds....
 
 # [Service]
 # TimeoutStartSec=900
