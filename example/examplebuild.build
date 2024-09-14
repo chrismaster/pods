@@ -1,6 +1,6 @@
 # vi: ft=systemd
 [Build]
-ImageTag=localhost/example
+ImageTag=localhost/examplebuild
 
 SetWorkingDirectory=%h/exampleBUILD
 
