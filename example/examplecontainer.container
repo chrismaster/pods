@@ -12,7 +12,7 @@ ContainerName=examplecontainer
 #Exec=examplecontainer run --config /etc/examplecontainer.json
 #AddCapability=NET_ADMIN
 
-#HostName=examplecontainer.mydomain.com
+#HostName=examplecontainer.mydomain.example
 
 # https://docs.podman.io/en/latest/markdown/podman-run.1.html#userns-mode
 # auto - Host User UID is not mapped into container
