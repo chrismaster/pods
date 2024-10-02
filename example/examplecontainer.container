@@ -26,6 +26,9 @@ ContainerName=examplecontainer
 # Volume=/var/run/user/1034/podman/podman.sock:/var/run/docker.sock:z
 # Volume=%h/examplecontainerVOLUME:/etc/somedata:Z
 
+# Tmpfs=
+# Tmpfs=
+
 # Environment=DOCKER_CERT_PATH=/certs/client
 # HealthCmd=curl --fail http://localhost:8501/_stcore/health
 
