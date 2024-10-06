@@ -1,7 +1,8 @@
 #!/bin/sh
 # vi: ft=sh
+test -e ~/.config/containers/systemd/$1.pod && echo "Pod $1.pod already exists --> EXIT" && exit || echo "Create $1.pod"
+mydir=$(pwd)
 mkdir -p ~/.config/containers/systemd/
 ( cd ~/.config/containers/systemd && curl -sSLO https://raw.githubusercontent.com/chrismaster/pods/main/example/examplepod.pod && sed -i -e "s/examplepod/$1/g" examplepod.pod && mv examplepod.pod $1.pod )
-cd ~
-ln -s .config/containers/systemd/$1.pod ~/$1-pod
+ln -s ~/.config/containers/systemd/$1.pod $mydir/$1-pod
 loginctl enable-linger $USER
